@@ -8,7 +8,6 @@
         int Divide(int a, int b);
 
         int Factorial(int a);
-        int AddThePreviousXOddNumbersToY(int x, int y);
 
     }
 }

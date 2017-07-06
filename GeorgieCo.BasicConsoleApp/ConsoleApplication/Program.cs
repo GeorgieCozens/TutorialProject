@@ -5,12 +5,13 @@ namespace com.georgieco.ConsoleApplication
 {
     public class Program
     {
+
         private static readonly List<string> ListOfApplications = new List<string>(){
             "1. Calculator",
             "2. To be implemented..."
             };
 
-        private int ApplicationInUse = 0;
+        public static int ApplicationInUse { get; set; }
 
         public static void Main(string[] args)
         {
@@ -21,8 +22,15 @@ namespace com.georgieco.ConsoleApplication
                 Console.WriteLine(application);
             }
             var optionChosen = Console.Read();
-            // Implement logic to instantiate calculator class
-            // set ApplicationInUse to 1
+            switch (optionChosen)
+            {
+                case 1:
+                    new Calculator();
+                    ApplicationInUse = 1;
+                    break;
+                default:
+                    break; 
+            }
         }
     }
 }

@@ -17,6 +17,27 @@ namespace ConsoleApplicationTest
             Assert.AreEqual(3, result);
         }
 
-        // implement a test for every method and ensure they all pass by right clicking and selecting run
+        [Test]
+        public void TestsNegativeFactorialReturnsError()
+        {
+            // Arange
+            var sut = new Calculator();
+            // Act
+            var result = sut.Factorial(-2);
+            // Assert
+            Assert.AreEqual(0, result);
+        }
+
+        [Test]
+
+        public void TestsFactorialFunction()
+        {
+            // Arrange
+            var sut = new Calculator();
+            // Act
+            var result = sut.Factorial(6);
+            // Assert
+            Assert.AreEqual(720, result);
+        }
     }
 }
