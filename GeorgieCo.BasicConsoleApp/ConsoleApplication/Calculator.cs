@@ -4,34 +4,44 @@ namespace com.georgieco.ConsoleApplication
 {
     public class Calculator : ICalculator
     {
-        public int Add(int a, int b)
+
+        public Calculator()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("You chose calculator - good job!");
         }
 
-        public int AddThePreviousXOddNumbersToY(int x, int y)
+        public int Add(int a, int b)
         {
-            throw new NotImplementedException();
+            return a + b;
         }
 
         public int Divide(int a, int b)
         {
-            throw new NotImplementedException();
+            return a / b;
         }
 
         public int Factorial(int a)
         {
-            throw new NotImplementedException();
+            if (a < 0)
+            {
+                Console.WriteLine("number cannot be negative");
+                return 0;
+            }
+            if (a==0)
+            {
+                return 1;
+            }
+            return a * Factorial(a - 1);
         }
 
         public int Multiply(int a, int b)
         {
-            throw new NotImplementedException();
+            return a*b;
         }
 
         public int Subtract(int a, int b)
         {
-            throw new NotImplementedException();
+            return a-b;
         }
 
         private void Exit()
